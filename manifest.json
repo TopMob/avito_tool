@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Avito Parser",
+  "version": "1.0.0",
+  "description": "Парсит объявления Авито в структурированный формат для анализа через ИИ",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "*://www.avito.ru/*",
+    "*://avito.ru/*",
+    "*://m.avito.ru/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Avito Parser"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.avito.ru/*",
+        "*://avito.ru/*",
+        "*://m.avito.ru/*"
+      ],
+      "js": [
+        "shared/parser.js",
+        "content/content.js"
+      ],
+      "css": [],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content/content.css"
+      ],
+      "matches": ["*://www.avito.ru/*", "*://avito.ru/*", "*://m.avito.ru/*"]
+    }
+  ]
+}

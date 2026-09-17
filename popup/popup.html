@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <title>Avito Parser</title>
+</head>
+<body>
+  <div class="popup">
+    <header class="popup-header">
+      <div class="popup-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+      </div>
+      <h1>Avito Parser</h1>
+    </header>
+
+    <div class="popup-status" id="status">
+      <div class="status-dot" id="status-dot"></div>
+      <span id="status-text">Проверка…</span>
+    </div>
+
+    <button class="popup-btn" id="btn-parse" disabled>
+      Собрать объявления
+    </button>
+
+    <div class="popup-last" id="last-parse" style="display:none">
+      <div class="popup-last-label">Последний парсинг</div>
+      <div class="popup-last-info" id="last-info"></div>
+    </div>
+
+    <div class="popup-settings">
+      <label class="popup-select-label">
+        Формат по умолчанию
+        <select id="default-format">
+          <option value="md">Markdown</option>
+          <option value="json">JSON</option>
+          <option value="tsv">TSV</option>
+        </select>
+      </label>
+    </div>
+
+    <footer class="popup-footer">
+      v1.0.0
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

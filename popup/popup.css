@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 280px;
+  min-height: 180px;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #222222;
+}
+
+.popup {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.popup-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #00aaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-logo svg {
+  width: 16px;
+  height: 16px;
+  color: #fff;
+}
+
+.popup-header h1 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.popup-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  font-size: 12px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ccc;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.status-dot.active {
+  background: #2ecc71;
+}
+
+.status-dot.inactive {
+  background: #e74c3c;
+}
+
+.popup-btn {
+  width: 100%;
+  padding: 9px;
+  border-radius: 6px;
+  border: none;
+  background: #00aaff;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.popup-btn:hover:not(:disabled) {
+  background: #0095e0;
+}
+
+.popup-btn:active:not(:disabled) {
+  background: #0088cc;
+}
+
+.popup-btn:focus-visible {
+  outline: 2px solid #00aaff;
+  outline-offset: 2px;
+}
+
+.popup-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.popup-last {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+}
+
+.popup-last-label {
+  font-size: 10px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.popup-last-info {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.popup-last-info strong {
+  color: #00aaff;
+}
+
+.popup-settings {
+  padding-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-select-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #888;
+}
+
+.popup-select-label select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  background: #f5f5f5;
+  color: #222;
+  font-size: 11px;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.popup-select-label select:focus-visible {
+  border-color: #00aaff;
+}
+
+.popup-footer {
+  font-size: 10px;
+  color: #aaa;
+  text-align: center;
+}
+
+
+
